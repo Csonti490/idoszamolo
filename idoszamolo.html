@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Időszámoló">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="CsontiXD">
+
+    <title>Időszámoló | By CsontiXD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        div#felulet {
+            width: 400px;
+            margin: 48px auto 0 auto;
+            border: 1px solid black;
+            border-radius: 16px;
+            padding: 16px;
+            background-color: #e4e4e4;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            font-size: large;
+        }
+        input#be_ora, input#be_perc {
+            width: 30%;
+            text-align: center;
+        }
+        input#ki_ora, input#ki_perc {
+            width: 95%;
+        }
+        button#szamol {
+            display: block;
+            margin: 0 auto;
+            background-color: #0077ff;
+            color: white;
+            padding: 8px 32px;
+            margin: 16px auto;
+            border-radius: 8px;
+        }
+        button#szamol:hover {
+            background-color: #005fcc;
+            cursor: pointer;
+        }
+        p#eredmeny {
+            font-size: 20px;
+            min-height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="felulet">
+        <h1>Idő</h1>
+        <div style="text-align: center;">
+            <input type="number" id="be_ora" min="0" max="24" placeholder="0-24" pattern="[0-9]{1,2}" value="0">
+             <b>:</b> 
+             <input type="number" id="be_perc" min="0" max="59" placeholder="0-59" pattern="[0-9]{1,2}" value="0">
+        </div>
+
+        <div style="text-align: center; margin-top: 16px;">
+            <input type="radio" name="minus_plus" id="minus" checked><label for="minus">Kivonás</label>
+            <input type="radio" name="minus_plus" id="plus"><label for="plus">Összeadás</label>
+        </div>
+
+        <h1><span class="tipus">Kivonandó</span> idő</h1>
+        <label for="ki_ora"><span class="tipus">Kivonandó</span> óra:</label><input type="number" id="ki_ora" min="0" placeholder="Bármilyen pozitív egész szám." value="0">
+        <br>
+        <label for="ki_perc"><span class="tipus">Kivonandó</span> perc:</label><input type="number" id="ki_perc" min="0" placeholder="Bármilyen pozitív egész szám." value="0">
+        <br>
+        <button id="szamol">Számolás</button>
+        <p id="eredmeny">Eredmény: <span id="eredmeny_ki"></span></p>
+    </div>
+
+    <div>
+        <h3>Megjegyzés:</h3>
+        <p>Példák: 12:30, 24:00, 9:11, 07:2, 0:42 </p>
+    </div>
+    
+    <script>
+        function valid(sz, min, max) {
+            return Number.isFinite(sz) && sz >= min && sz <= max;
+        }
+
+        document.getElementById("szamol").addEventListener("click", () => {
+            let h = parseInt(document.getElementById('be_ora').value, 10);
+            let m = parseInt(document.getElementById('be_perc').value, 10);
+            let kh = parseInt(document.getElementById('ki_ora').value, 10);
+            let km = parseInt(document.getElementById('ki_perc').value, 10);
+
+            let m_p = document.getElementById('plus').checked ? true : false;
+            console.log(m_p);
+
+            if (h === 24 && m === 0) {
+                h = 0;
+            }
+
+            if (!valid(h,0,23) || !valid(m,0,59)) {
+                document.getElementById('eredmeny_ki').innerText = 'Hibás kiinduló idő (óra: 0-23, perc: 0-59).';
+                return;
+            }
+            if (!Number.isFinite(kh) || !Number.isFinite(km) || kh < 0 || km < 0) {
+                document.getElementById('eredmeny_ki').innerText = 'A kivonandó értékek nem megfelelőek.';
+                return;
+            }
+
+            let total = h * 60 + m;
+            total = m_p ? total+(kh * 60 + km) : total-(kh * 60 + km);
+
+            const dayMinutes = 24 * 60;
+            total = ((total % dayMinutes) + dayMinutes) % dayMinutes;
+
+            const ujH = String(Math.floor(total / 60)).padStart(2,'0');
+            const ujM = String(total % 60).padStart(2,'0');
+
+            document.getElementById('eredmeny_ki').innerText = ujH + ':' + ujM;
+        });
+
+        document.getElementById("minus").addEventListener("change", () => {
+            document.querySelectorAll('.tipus').forEach(elem => {
+                elem.textContent = "Kivonandó";
+            });
+        });
+
+        document.getElementById("plus").addEventListener("change", () => {
+            document.querySelectorAll('.tipus').forEach(elem => {
+                elem.textContent = "Hozzáadandó";
+            });
+        });
+
+
+        function resetFields() {
+            document.getElementById('be_ora').value = 0;
+            document.getElementById('be_perc').value = 0;
+            document.getElementById('minus').checked = true;
+            document.getElementById('ki_ora').value = 0;
+            document.getElementById('ki_perc').value = 0;
+            document.getElementById('eredmeny_ki').innerText = "";
+        }
+
+        window.addEventListener("load", resetFields);
+    </script>
+</body>
+</html>
