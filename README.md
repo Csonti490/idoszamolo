@@ -18,6 +18,9 @@ Egy kisebb időszámoló egy ismerősömnek.
   <tr>
     <td><img src="./kep1.png" title="Katt a képre a nagyításhoz." width="100%"/></td>
   </tr>
+  <tr>
+    <th>A program kinézete</th>
+  </tr>
 </table>
 
 <hr>
