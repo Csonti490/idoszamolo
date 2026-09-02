@@ -1,12 +1,6 @@
 <hr>
 
-<div id="user-content-toc" align="center">
-  <ul style="list-style: none;">
-    <summary>
-      <h1>Időszámoló</h1>
-    </summary>
-  </ul>
-</div>
+<h1>Időszámoló</h1>
 
 <p align="center">
 Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összeadni és kivonni.
@@ -25,13 +19,7 @@ Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összead
 
 <hr>
 
-<div id="user-content-toc" align="center">
-  <ul style="list-style: none;">
-    <summary>
-      <h1>Technológiák</h1>
-    </summary>
-  </ul>
-</div>
+<h1>Technológiák</h1>
 
 <h3>Alap webes technológiák</h3>
 <ul>
@@ -42,13 +30,7 @@ Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összead
 
 <hr>
 
-<div id="user-content-toc" align="center">
-  <ul style="list-style: none;">
-    <summary>
-      <h1>Legutóbbi frissítések</h1>
-    </summary>
-  </ul>
-</div>
+<h1>Legutóbbi frissítések</h1>
 
 <ul>
   <li>README feltöltése</li>
@@ -56,25 +38,13 @@ Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összead
 
 <hr>
 
-<div id="user-content-toc" align="center">
-  <ul style="list-style: none;">
-    <summary>
-      <h1>Oldal elérése</h1>
-    </summary>
-  </ul>
-</div>
+<h1>Oldal elérése</h1>
 
 Az oldal a következő linken érhető el: [https://csonti490.github.io/idoszamolo/](https://csonti490.github.io/idoszamolo/)
 
 <hr>
 
-<div id="user-content-toc" align="center">
-  <ul style="list-style: none;">
-    <summary>
-      <h1>Megjegyzés</h1>
-    </summary>
-  </ul>
-</div>
+<h1>Megjegyzés</h1>
 
 Jelenlegi verzió: **1.00.01**  
 Legutolsó frissítés dátuma: **2026.09.02.**
