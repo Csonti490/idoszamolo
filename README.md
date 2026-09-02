@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-Egy kisebb időszámoló egy ismerősömnek.
+Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összeadni és kivonni.
 </p>
 
 <hr>
