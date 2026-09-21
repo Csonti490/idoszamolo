@@ -8,7 +8,7 @@ Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összead
 
 <hr>
 
-<summary><h1 align="center"> <p> Hello World! </p> </h1></summary>
+<summary><h1 align="center"> Hello World! </h1></summary>
 <summary><h1 align="center"> Eu sou Enzo Bustos </h1></summary>
 
  <table align="center" width="100%">
