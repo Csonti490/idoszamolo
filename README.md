@@ -1,16 +1,6 @@
 <hr>
 
-<div id="user-content-toc" align="center">
-  <ul style="list-style: none;">
-    <summary>
-      <h1>Időszámoló</h1>
-    </summary>
-  </ul>
-</div>
-
-<p >
-  <h1 align="center">Időszámoló</h1>
-</p>
+<h1 align="center">Időszámoló</h1>
 
 <p align="center">
 Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összeadni és kivonni.
