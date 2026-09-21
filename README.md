@@ -7,7 +7,7 @@ Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összead
 </p>
 
 <hr>
-<p><h2 align="center"> Kinézet </h2></p>
+<p><h3 align="center"> Kinézet </h3></p>
 <summary><h2 align="center"> Kinézet </h2></summary>
 <h2 align="center"> Kinézet </h2>
 
