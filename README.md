@@ -9,6 +9,10 @@
 </div>
 
 <p align="center">
+  <h1>Időszámoló</h1>
+</p>
+
+<p align="center">
 Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összeadni és kivonni.
 </p>
 
