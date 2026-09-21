@@ -8,13 +8,7 @@ Ez egy egyszerű időszámoló webes eszköz, amely órát‑percet tud összead
 
 <hr>
 
-<div id="user-content-toc" align="center">
-  <ul style="list-style: none;">
-    <summary>
-      <h1>Kinézet</h1>
-    </summary>
-  </ul>
-</div>
+<h2 align="center">Kinézet</h2>
 
  <table align="center" width="100%">
   <tr>
