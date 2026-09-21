@@ -8,8 +8,8 @@
   </ul>
 </div>
 
-<p align="center">
-  <h1>Időszámoló</h1>
+<p >
+  <h1 align="center">Időszámoló</h1>
 </p>
 
 <p align="center">
